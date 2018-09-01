@@ -14,7 +14,7 @@ DIFF=diff
 RM=rm -f
 CUSTOM=custom.mk
 EXTRAS=$(BUILDDIR)memcmp$O $(BUILDDIR)memmove$O $(BUILDDIR)strncmp$O
-THREADS=$(BUILDDIR)thread$O $(BUILDDIR)swtch$O
+#THREADS=$(BUILDDIR)thread$O $(BUILDDIR)swtch$O
 include $(CUSTOM)
 B=$(BUILDDIR)
 
@@ -54,7 +54,7 @@ EXAMPLES=	$Bdouble$E \
 		$Bwords$E \
 		$Bbasename$E \
 		$Bdirname$E \
-		$Bsort$E \
+#		$Bsort$E \
 		$Bspin$E \
 		$Bsieve$E
 
@@ -84,10 +84,10 @@ $Bstack$O:	src/stack.c;	$(CC) $(CFLAGS) -c -o $@ src/stack.c
 $Bstr$O:	src/str.c;	$(CC) $(CFLAGS) -c -o $@ src/str.c
 $Btable$O:	src/table.c;	$(CC) $(CFLAGS) -c -o $@ src/table.c
 $Btext$O:	src/text.c;	$(CC) $(CFLAGS) -c -o $@ src/text.c
-$Bthread$O:	src/thread.c;	$(CC) $(CFLAGS) -c -o $@ src/thread.c
+#$Bthread$O:	src/thread.c;	$(CC) $(CFLAGS) -c -o $@ src/thread.c
 $Bthread-nt$O:	src/thread-nt.c;$(CC) $(CFLAGS) -c -o $@ src/thread-nt.c
 $Bxp$O:		src/xp.c;	$(CC) $(CFLAGS) -c -o $@ src/xp.c
-$Bswtch$O:	src/swtch.s;	$(AS) -o $@  src/swtch.s
+#$Bswtch$O:	src/swtch.s;	$(AS) -o $@  src/swtch.s
 
 $Bmemcmp$O:	src/memcmp.c;	$(CC) $(CFLAGS) -c -o $@ src/memcmp.c
 $Bmemmove$O:	src/memmove.c;	$(CC) $(CFLAGS) -c -o $@ src/memmove.c
@@ -169,6 +169,6 @@ $Bstack$O:	$I/assert.h $I/except.h $I/mem.h $I/stack.h
 $Bstr$O:	$I/assert.h $I/except.h $I/fmt.h $I/str.h $I/mem.h
 $Btable$O:	$I/mem.h $I/except.h $I/assert.h $I/table.h
 $Btext$O:	$I/assert.h $I/except.h $I/fmt.h $I/text.h $I/mem.h
-$Bthread$O:	$I/assert.h $I/except.h $I/mem.h $I/thread.h $I/sem.h
+#$Bthread$O:	$I/assert.h $I/except.h $I/mem.h $I/thread.h $I/sem.h
 $Bthread-nt$O:	$I/assert.h $I/except.h $I/mem.h $I/thread.h $I/sem.h
 $Bxp$O:		$I/assert.h $I/except.h $I/xp.h
