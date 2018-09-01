@@ -1,2 +1,16 @@
 *.o
 *.a
+#二进制文件
+basename
+calc
+cref
+dirname
+double
+idents
+ids
+iref
+kref
+mpcalc
+wf
+words
+xref
